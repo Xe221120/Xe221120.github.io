@@ -1,0 +1,95 @@
+:root {
+  --void: #0b1014;
+  --panel: #121920;
+  --ink: #e7eef4;
+  --ink-dim: #9aabba;
+  --signal: #2ad4a4;
+  --signal-dim: rgba(42, 212, 164, 0.16);
+  --line: rgba(231, 238, 244, 0.1);
+  --line-strong: rgba(42, 212, 164, 0.35);
+  --hero-veil:
+    linear-gradient(
+      180deg,
+      rgba(11, 16, 20, 0.45) 0%,
+      rgba(11, 16, 20, 0.35) 40%,
+      rgba(11, 16, 20, 0.82) 100%
+    ),
+    linear-gradient(
+      100deg,
+      rgba(11, 16, 20, 0.75) 0%,
+      rgba(11, 16, 20, 0.25) 50%,
+      transparent 100%
+    );
+
+  --font-brand: "Space Grotesk", "Noto Sans SC", sans-serif;
+  --font-display: "Space Grotesk", "Noto Sans SC", sans-serif;
+  --font-body: "Noto Sans SC", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --page-pad: clamp(1.25rem, 4vw, 3.5rem);
+  --max: 72rem;
+  --grid-size: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background-color: var(--void);
+  background-image:
+    linear-gradient(rgba(42, 212, 164, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 212, 164, 0.035) 1px, transparent 1px),
+    radial-gradient(90% 70% at 85% -10%, rgba(42, 212, 164, 0.12), transparent 55%),
+    radial-gradient(70% 50% at 0% 100%, rgba(42, 120, 180, 0.08), transparent 50%),
+    linear-gradient(180deg, #0e151b 0%, var(--void) 45%, #0a0f13 100%);
+  background-size:
+    var(--grid-size) var(--grid-size),
+    var(--grid-size) var(--grid-size),
+    auto,
+    auto,
+    auto;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(42, 212, 164, 0.3);
+  color: var(--ink);
+}
+
+#root {
+  min-height: 100svh;
+}
